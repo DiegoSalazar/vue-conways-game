@@ -10,7 +10,11 @@
   >
     <q-card>
       <q-card-section>
-        <q-list bordered separator class="rounded-borders">
+        <q-list
+          bordered
+          separator
+          class="rounded-borders"
+        >
           <q-item>
             <q-item-section>Use the keyboard or buttons to control the game</q-item-section>
           </q-item>

@@ -5,13 +5,9 @@ module.exports = function (ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
-    boot: [
-      'axios'
-    ],
+    boot: ['axios'],
 
-    css: [
-      'app.styl'
-    ],
+    css: ['app.styl'],
 
     extras: [
       // 'ionicons-v4',
@@ -60,14 +56,10 @@ module.exports = function (ctx) {
         'QToolbarTitle'
       ],
 
-      directives: [
-        'Ripple'
-      ],
+      directives: ['Ripple'],
 
       // Quasar plugins
-      plugins: [
-        'Notify'
-      ]
+      plugins: ['Notify']
     },
 
     supportIE: false,
@@ -121,23 +113,19 @@ module.exports = function (ctx) {
             'src': 'statics/icons/icon-128x128.png',
             'sizes': '128x128',
             'type': 'image/png'
-          },
-          {
+          }, {
             'src': 'statics/icons/icon-192x192.png',
             'sizes': '192x192',
             'type': 'image/png'
-          },
-          {
+          }, {
             'src': 'statics/icons/icon-256x256.png',
             'sizes': '256x256',
             'type': 'image/png'
-          },
-          {
+          }, {
             'src': 'statics/icons/icon-384x384.png',
             'sizes': '384x384',
             'type': 'image/png'
-          },
-          {
+          }, {
             'src': 'statics/icons/icon-512x512.png',
             'sizes': '512x512',
             'type': 'image/png'
@@ -151,8 +139,7 @@ module.exports = function (ctx) {
       // noIosLegacyBuildFlag: true, // uncomment only if you know what you are doing
     },
 
-    electron: {
-      // bundler: 'builder', // or 'packager'
+    electron: { // bundler: 'builder', // or 'packager'
 
       extendWebpack (cfg) {
         // do something with Electron main process Webpack cfg

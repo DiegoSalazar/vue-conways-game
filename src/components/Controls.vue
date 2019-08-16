@@ -1,15 +1,51 @@
 <template>
   <div class="q-gutter-sm q-pb-sm">
     <div class="row">
-      <q-btn push class="col" color="white" text-color="primary" label="Play" />
-      <q-btn push class="col" color="white" text-color="info" label="Clear" />
-      <q-btn push class="col" color="white" text-color="warning" label="Reset" />
+      <q-btn
+        push
+        class="col"
+        color="white"
+        text-color="primary"
+        label="Play"
+      />
+      <q-btn
+        push
+        class="col"
+        color="white"
+        text-color="info"
+        label="Clear"
+      />
+      <q-btn
+        push
+        class="col"
+        color="white"
+        text-color="warning"
+        label="Reset"
+      />
     </div>
 
     <div class="row">
-      <q-btn push class="col" color="white" text-color="secondary" label="V Line" />
-      <q-btn push class="col" color="white" text-color="secondary" label="Center" />
-      <q-btn push class="col" color="white" text-color="secondary" label="H Line" />
+      <q-btn
+        push
+        class="col"
+        color="white"
+        text-color="secondary"
+        label="V Line"
+      />
+      <q-btn
+        push
+        class="col"
+        color="white"
+        text-color="secondary"
+        label="Center"
+      />
+      <q-btn
+        push
+        class="col"
+        color="white"
+        text-color="secondary"
+        label="H Line"
+      />
     </div>
 
     <q-select

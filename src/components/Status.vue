@@ -1,6 +1,9 @@
 <template>
   <div class="q-pa-sm">
-    <q-markup-table dense title="Stats">
+    <q-markup-table
+      dense
+      title="Stats"
+    >
       <tbody>
         <tr>
           <th class="text-right">Elapsed</th>
