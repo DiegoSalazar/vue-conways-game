@@ -1,21 +1,40 @@
 <template>
   <q-page-container>
-    <q-drawer v-model="drawerOpen" side="right">
-      <div class="q-pa-md">
+    <q-drawer
+      v-model="drawerOpen"
+      side="right"
+      show-if-above
+    >
+      <div class="q-pa-sm">
+        <Status class="q-mb-md" />
         <Controls />
-        <Status />
         <Settings />
+        <q-btn
+          push
+          class="block full-width q-mb-md"
+          color="white"
+          text-color="primary"
+          label="Save"
+        />
         <Info />
       </div>
     </q-drawer>
 
-    <div class="q-pa-md">
-      CANVAS
+    <div class="q-pa-sm">
+      <q-img
+        :ratio="1"
+        src="statics/conways.png"
+        id="conways"
+      />
     </div>
   </q-page-container>
 </template>
 
 <style>
+#conways {
+  width: 100vw;
+  height: 80vh;
+}
 </style>
 
 <script>
