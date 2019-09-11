@@ -7,8 +7,9 @@
     >
       <div class="q-pa-sm">
         <Status class="q-mb-md" />
-        <Controls />
-        <Settings />
+        <Controls @click="sendControl" />
+        <Settings @update="updateSettings" />
+
         <q-btn
           push
           class="block full-width q-mb-md"
@@ -20,13 +21,7 @@
       </div>
     </q-drawer>
 
-    <div class="q-pa-sm">
-      <q-img
-        :ratio="1"
-        src="statics/conways.png"
-        id="conways"
-      />
-    </div>
+    <Game :settings="settings" />
   </q-page-container>
 </template>
 
@@ -38,14 +33,15 @@
 </style>
 
 <script>
-import Controls from '../components/Controls.vue'
 import Status from '../components/Status.vue'
+import Controls from '../components/Controls.vue'
 import Settings from '../components/Settings.vue'
 import Info from '../components/Info.vue'
+import Game from '../components/conways/Game.vue'
 
 export default {
   name: 'PageIndex',
-  components: { Controls, Status, Settings, Info },
+  components: { Status, Controls, Settings, Info, Game },
   props: {
     drawerOpen: {
       type: Boolean,
@@ -54,9 +50,23 @@ export default {
   },
   data () {
     return {
+      settings: {
+        preSeed: 'Gospers',
+        renderStyle: 'Blocky',
+        fps: 30,
+        width: 800,
+        height: 600,
+        unit: 10
+      }
     }
   },
   methods: {
+    sendControl (control) {
+      console.log({ control })
+    },
+    updateSettings (newSettings) {
+      this.settings = newSettings
+    }
   }
 }
 </script>

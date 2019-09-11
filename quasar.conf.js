@@ -33,6 +33,7 @@ module.exports = function (ctx) {
         'QBtnGroup',
         'QCard',
         'QCardSection',
+        'QChip',
         'QDrawer',
         'QExpansionItem',
         'QFooter',

@@ -7,6 +7,7 @@
         color="white"
         text-color="primary"
         label="Play"
+        @click="$emit('click', 'play')"
       />
       <q-btn
         push
@@ -14,6 +15,7 @@
         color="white"
         text-color="info"
         label="Clear"
+        @click="$emit('click', 'clear')"
       />
       <q-btn
         push
@@ -21,6 +23,7 @@
         color="white"
         text-color="warning"
         label="Reset"
+        @click="$emit('click', 'reset')"
       />
     </div>
 
@@ -31,6 +34,7 @@
         color="white"
         text-color="secondary"
         label="V Line"
+        @click="$emit('click', 'vLine')"
       />
       <q-btn
         push
@@ -38,6 +42,7 @@
         color="white"
         text-color="secondary"
         label="Center"
+        @click="$emit('click', 'center')"
       />
       <q-btn
         push
@@ -45,49 +50,15 @@
         color="white"
         text-color="secondary"
         label="H Line"
+        @click="$emit('click', 'hLine')"
       />
     </div>
-
-    <q-select
-      filled
-      dense
-      options-dense
-      v-model="preSeed"
-      :options="preSeedOptions"
-      stack-label
-      label="Pre Seed"
-      :display-value="preSeed"
-    />
-    <q-select
-      filled
-      dense
-      options-dense
-      v-model="renderStyle"
-      :options="renderStyleOptions"
-      stack-label
-      label="Render Style"
-      :display-value="renderStyle"
-    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Controls',
-  data () {
-    return {
-      preSeed: 'Gospers',
-      renderStyle: 'Blocky',
-      preSeedOptions: [
-        'Gospers',
-        'Sword'
-      ],
-      renderStyleOptions: [
-        'Blocky',
-        'Round'
-      ]
-    }
-  }
+  name: 'Controls'
 }
 </script>
 
